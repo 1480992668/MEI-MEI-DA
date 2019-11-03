@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        /*   window.onload 当页面中的所有静态资源加载完成才执行里面的函数 */
+        /*  window.onload = function () {
+             var bth = document.getElementById("bth")
+             var i = 0;
+             btn.onclick = function () {
+                 alert(i);
+                 i = null
+             }; bth2.onclick = function () { console.dor(btn.onclick) }
+         } */
+    </script>
+</head>
+
+<body>
+    <!--  <button id="btn">1</button>
+    <button id="btn2">2</button>
+    <button>3</button> -->
+</body>
+<script>
+    /*  for (var i = 0; i <= 10; i++) {
+         function fn(a) { setTimeout(function () { console.log(a) }, 1000) }; fn(i)
+     } */
+
+
+
+    const btns = document.querySelectorAll("button");
+    for (var i = 0; i < btns.length; i++) {
+        btns[i].suyin = i;
+        function fn(aa) { bths[i].onclick = function () { alert(i) } };
+        fn(i)
+    };
+
+
+
+/* 
+            ; (function (aa) {
+                btns[aa].onclick = function () {
+                    alert(aa);
+                }
+            })(i);
+
+    };
+ */
+
+</script>
+
+</html>
