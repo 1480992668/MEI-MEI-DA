@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 闭包 他是抽象的
+闭包概念：1函数嵌套函数
+2子函数使用父函数的参数和变量
+3外部使用了子函数
+4父函数的参数不会被销毁
+5证明 父级函数的返回值下有一个 scopes下有closure 证明形成了闭包
+ 
+
+闭包的作用  存储父函数的值 （保证其不被销毁）
+但会造成栈内存溢出所以要赋值一个null释放一下
+
+-->
+
+    <script>
+
+        function aa() {var i=0; 
+        
+        function a() { i++;console.log(i)};
+        
+        return a}
+        let ff =aa();
+        ff();
+        ff();
+        ff();
+        ff();
+        ff();
+        ff();
+
+
+    </script>
+</body>
+
+</html>

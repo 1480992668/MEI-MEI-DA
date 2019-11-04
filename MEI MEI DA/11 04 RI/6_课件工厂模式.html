@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        /* 工厂模式就是为了批量生产实例
+        函数的目的就是为了复用 */
+
+        function aa(name, age) {
+            let bb = {};
+            bb.name = name;
+            bb.age = age;
+            return bb
+        }
+        let bbee = aa("zhuzhu", 100)
+console.log(bbee)
+    </script>
+</body>
+
+</html>
