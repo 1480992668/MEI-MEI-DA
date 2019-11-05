@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+<script>
+  /*   单例模式 */
+    a = {
+        name: "zhao",
+        age: "666"
+    }
+   /*  高级单例模式 */
+    let bb = (function () {
+        function sum() { }
+        return { sum: sum }
+    })(66)
+
+
+
+    let bb2 = (function (i) { function sum(){} a.sum()
+    return {}})(i)
+
+/* 总结 单例模式功能不强大，高级单例模式该强大 （可以选择性返回返回值） */
+
+/* 闭包有封闭空间的功能 封闭空间不是闭包 */
+
+
+/* 工厂模式 */
+function fn (name,age ){let obj ={};
+obj.name =name;
+obj.age=age;
+return obj}
+
+
+/* 面向对象：（谁来做这件事）
+抽象  归类  具现实例 */
+
+
+
+/* new 一元运算符 只能运算函数（箭头函数除外） */
+
+
+
+/* 函数 原型 （类的原型） 实例（原型链） */
+
+
+
+
+</script>
+
+</html>

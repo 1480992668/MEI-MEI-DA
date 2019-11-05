@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        當一個函數創見的時候天生自帶的方法
+        call：若干函數  （1修改this的指針2函數的shican）
+
+        apply兩個參數
+        （1修改this的指針2函数的实参）
+
+        bind （惰性函數 科利華函數 高階函數）
+        （1修改this的指向2函數的實參）
+
+        它返回的是新函數 ，只有調用才會執行函數
+
+        不能傳null undefined因為無法識別，還會走默認的window
+
+        function fn(a, b) {
+            console.log(this, a, b);
+        }; fn.call(document, 1, 2);
+
+        fn.apply(document, [1, 2])
+        fn.bind(document, 1, 2)()
+        fn.bind(document)(1, 2)
+        console.dir(fn);
+    </script>
+</body>
+
+</html>

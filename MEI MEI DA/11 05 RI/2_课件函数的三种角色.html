@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+
+<script>
+/* /*函数的三种角色  */
+/* function aa (){}
+函数：能够调用角色
+构造函数：new 构造对象的
+fn.prototype 公共属性或方法挂在这个构造函数的原型下
+new Array().push()
+new Array.forEach()
+[].push
+Function 的实例 
+new Function ==》function()
+{}
+_ _proto_
+
+在函数的原型下有一个 constructor 这个属性指向构造函数 但当前的constructor并不准确，它的指针仅仅是一个指向参考 很容易被修改
+ */
+ 
+
+function fn (){}
+fn.prototype ={
+    constructor :fn 
+};
+console.dir (fn.prototype.constructor)
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+</html>
