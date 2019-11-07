@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+/* 三个
+call（that，多个）
+apply（that，两个）
+bind（that，多个）
+三个共同的特点，都可以改变this的指向，三个都是函数默认自带的
+null 和undefined 无法识别 哪怕传了仍然指向window
+this是实例
+默认return 实例，如果return 为引用类型就为引用类型
+实例的原型链 ===构造函数的原型
+实例不加括号  也可以调用函数 */
+
+function Fn(name){
+    this.name =name;
+}
+let f =New(Fn,"冉冉")
+()
+console.log (f.constructor);
+function New (fn,...ary){
+
+    let obj =new Object;
+    let callback =fn.call(obj,...ary);
+    obj.__proto__ =fn.prototype;
+    if(callback !==null&&typeofcallbacck==="object"||typeofcallback==="function"){
+        return callback;
+    }
+    return obj;
+}
+    </script>
+</body>
+
+</html>

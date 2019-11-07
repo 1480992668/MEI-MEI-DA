@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .active {
+            background: yellow;
+        }
+
+        #box div {
+            width: 200px;
+            height: 100px;
+            border: 1px solid #000;
+            display: none;
+        }
+
+        #box div.show {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="box">
+        <button class="active" index="0">按钮一</button>
+        <button>按钮二</button>
+        <button>按钮三</button>
+        <div class="show">111</div>
+        <div>222</div>
+        <div>333</div>
+    </div>
+
+    <script>
+
+
+        /* //定点清除
+        const btns =document.querySelectorAll ("button");
+        const divs=document.querySelectorAll("#box div"
+        );
+        let prevIndex =0;
+        btns.forEach((ele,index)=>{
+        
+        ele.onclick =function (){
+        
+            btns[prevIndex].className ="";
+            divs[prevIndex].className ="";
+            this.classname ="active";
+            div[index].className ="show";
+            prevIndex =index;
+        }
+        
+        }); */
+
+
+
+
+/*         //面向對象班選項卡
+
+        function Tab(id) {
+
+            this.box = document.getElementById("id")
+            this.divs = this.box.querySelectororAll("div")
+            this.btns = document.this.btns.querySelectororAll("button");
+            this.prevIndex = 0;
+
+        }
+
+        Tab.prototype .events=function(){
+            const lthat =this;
+            this.bths.forEach(function(element,index){element.onclick=function (){
+                lthat.change(this,index)
+            }})
+        }
+        Tab.prototype.change =function(that,index){
+            this.btns[this.prevIndex].className='';
+            this.divs[this.prevIndex].className ='';
+            that .className ="active";
+            this.divs[index].className ="show";
+            this.prevIndex =index
+        }
+
+        let t =new Tab ("box");
+        let t2 =new Tab("box2");
+        t2.events();
+        t.events();
+        Console.log(t);
+
+ */
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+ 
+    </script>
+
+
+
+</body>
+
+</html>
