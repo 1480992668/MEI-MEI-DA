@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    如果不是附地址 而是赋值 
+
+    Object.assign 浅拷贝
+    Object.assgin (obj2,obj1,obj )
+从右向左依次象括号中的第0项依次按最右侧层级大于左侧的规则浅克隆 不能是引用类型
+
+Object.assign (
+
+prototype2,prototypr1
+)
+console.dir(Object)
+prototypr2.say =function(){
+
+    console.log("woshinibaba")
+}
+
+console.log(prototype2)
+prototypr1.say ()
+prototype2 .say()
+
+两个引用类型的赋值就是附地址
+简单类型 就是正常赋值
+
+如何避免附地址
+
+1需要两个不同的地址
+2b地址下拥有a地址下的原始类型数据
+
+
+let ary =[1,2,3[[[[[[[[[[[2]]]]]]]]]]]]
+let ary =[1,2,3,[1,2,3,{name:[123]}]]
+深克隆
+function deepclone(obj){
+if(typeof obj !=="object"&&obj!==null)
+
+return null;
+let o =obj.push?[]:{};
+精确数组还是对象
+for (let attr in obj){
+//循环引用类型拿到简单数据类型
+if(typeof obj [attr]==="object"){
+o[attr]=deepclong(onj[attr]);
+
+
+}
+else {
+    o[attr]=obj [attr]
+}
+}
+return o
+}
+
+
+
+
+
+
+JSON.parse(JSON.stringify(ary));
+
+let ary2 =deepclong(ary)
+ary2[3][0][0][0][0][0][0][0][0][0][0][0][0][0].push(4)
+console.log(ary2)
+
+
+
+</body>
+</html>

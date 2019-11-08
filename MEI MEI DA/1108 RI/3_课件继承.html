@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+  
+    <title>Document</title>
+</head>
+<body>
+    <!-- 面相对象特征
+    封装复用 继承 多态
+
+
+函数封装复用
+
+函数继承
+子级继承父级的方法 和属性等等-->
+</body>
+
+
+<script>
+
+
+function Person (name,age){
+    this.name =name ;
+    this.age =age;
+
+}
+
+
+Person.prototype.say =function (){
+    alert("名字"+this.name)
+}
+let a =new Person("小成子",18)
+
+function police (name ,age){
+
+    this .name=name,
+    this.age =age,
+    this.job ="写死"
+}
+
+Police.prototype.say =function (){
+    alert("名字"+this.name);
+}
+Police .prototype .kongfu =function(){
+
+    alert(+this.name+"被打")
+
+    
+}
+
+let a =new police("赵炎",100)
+a.say();
+a.kongfu ()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+</html>

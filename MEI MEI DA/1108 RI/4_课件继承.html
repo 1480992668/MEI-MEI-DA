@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+  
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+
+        继承的方式
+        函数类继承 （call继承）
+        原型继承
+        寄生式继承
+        拷贝继承
+        对向继承
+        class继承
+        ......
+
+        继承的目的 子级能够调用父级的方法
+
+     -->
+</body>
+
+<script>
+
+
+/* 
+属性继承
+调用父级，通过call 把this 变成子级的实例即可继承 （call继承）
+*/
+/* function Police (name,age){
+
+    Person .call(
+        this,name,age
+    ) ;
+    console.log(this)
+
+
+}
+let a =new Police;
+ */
+
+/* 方法继承
+通过浅拷贝，继承父级的方法和属性   赋值给子类的原型
+ */
+
+/* 
+函数  类 实例
+ */
+function Person(name,age){
+
+    this .name =name
+    this.age =age
+}
+Person.prototype.say =function(){
+
+alert("名字"+this.name );
+
+}
+function Police (name,age){
+
+Person.call(this,name,age )
+
+}
+
+
+Object.assign(Police.prototype,Person.prototype);
+
+Police.prototype .say =function (){
+
+alert("woshi nibab a");
+
+}
+
+let a =new Police
+let a1 =new Person
+
+p.say();
+a1.say()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+</html>
