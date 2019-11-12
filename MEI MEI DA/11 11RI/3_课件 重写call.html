@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+   <p>
+       call 函数自带的方法，勇于改变this的指向，两个参数 第一个参数是修改this的指向，第二个参数是实参
+       注意点 null 和undefined this仍然指向window
+
+       改变this的几种方法
+       1事件函数的绑定
+       例如（
+       docment.onclick =function （）{console.log（this）}当前this指向document
+       ）
+       2 this指向点前面的住（.XXX）例如
+       aaa.click=function（）{console.log（this）}
+
+
+
+       通俗来讲只要记住 函数等于对象a的方法b this就指向对象a 例如
+       obj .splice（）=function （）{
+           console.log(this)
+       }
+
+   </p> 
+</body>
+
+
+<script>
+
+Function.prototype.mycsll =function (that,...ary){
+
+let type =typeof that;
+if(that ===null||that===undefined){that =window}
+else {
+    switch(type){
+        case'string':that =new String (that);
+        break;
+        case'boolean':that =new Boolean(that);
+        break
+        case'number':that =new Number(that);
+        break;
+    }
+}
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+//多个call 第一个参数一定是会被调用的this
+//最后一个call的第一个参数为调用的那个函数，///第二个参数是this指向，之后才是实参
+
+function fnn(){
+console.log(1);
+
+}
+function fnn2(){
+    console.log(2,this);
+}
+
+
+
+
+
+
+
+
+
+</script>
+</html>
