@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+
+<script>
+
+
+let str2 = '中国人中国人德国人美国人越南人缅甸人中国人老挝人菲律宾人';
+
+/*  console.log(str2.replace(/中国人/g,($0)=>$0.substr(0,2) + '神')); */
+
+ console.log(str2.replace(/(?<=中国)人/g,'冉'));
+
+
+ console.log(str2.replace(/中国(?=人)/g,'華夏龍'));
+
+
+ let aa ='红鲤鱼绿鲤鱼蓝鲤鱼';
+ console.log(aa.replace(/(?<=红鲤)鱼/g,'冉冉'))
+
+
+ let aa1 ='红鲤鱼绿鲤鱼蓝鲤鱼';
+ console.log(aa1.replace(/红鲤(?=鱼)/g,'冉冉'))
+
+
+
+
+let str22 = 'dj1x中8nhce2f3%6f\n7%vrxbby';
+    console.log(str22.match(/.+/g));
+
+
+
+    let str331 = 'Aa-aA_32@139.com';
+  
+    console.log(/^[a-zA-Z][\w.-]{5,17}@[0-9a-zA-Z]{2,10}\.c(om|n)$/.test(str331));
+
+    \d代表0到9
+
+let str15 = '12345';
+console.log(/\d/.test(str15));
+
+     \D
+     代表非数字
+
+let str17 = '12s345';
+console.log(/\D/.test(str17));
+     \n
+     let str = 'dj1x中8nhce2f3%6f\n7%vrxbby';
+    console.log(str.match(/.+/g));
+
+
+     \s  一个空格
+     let str = 'xx   -x_32@139.com';
+     console.log(/\w/.test(str));
+
+
+     
+
+
+
+     \b  一个边界符
+     let str = '冉aaa';
+     let str = 'a a a';
+     let str = '冉 冉冉';
+     let str = '，。；‘';
+     \w  一个数字、字母、下划线
+
+     let str = 'xx-x_32@139.com';
+     console.log(/\w/.test(str));
+
+
+
+</script>
+
+
+</html>
