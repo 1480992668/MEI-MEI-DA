@@ -1,0 +1,28 @@
+2_课件身份证号码的验证
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+</body>
+<script>
+ let str2 = '53010320190808291';
+
+ console.log(/^[1-8]\d{5}(19[2-9]\d|20[0-1]\d)(0[1-9]|1[0-2])(0[1-9]|[12]\d|3[01])\d{3}(\d|X)$/.test(str2));
+
+
+/*  console.log(/^[1-8]\d{5}(19[2-9]\d|20[0-1]\d)(0[1-9]|1[0-2])(0[1-9]|[12]\d|3[01])\d{3}(\d|X)$/.test(str2));
+ 
+ 1-8数字位数5位 1920到1999年2000年到2019年
+ 11 12日到20 29 30 到31 0到9 三位
+ 或者X
+ 
+ */
+
+</script>
+
+</html>

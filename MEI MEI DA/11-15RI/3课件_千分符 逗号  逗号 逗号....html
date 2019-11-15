@@ -1,0 +1,22 @@
+千分符
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+</body>
+
+<script>
+
+let str = '3001000000';
+/* console.log(/\d(?=\d{3})/.exec(str)); */
+console.log((/(\d)(?=\d{3})+/g).exec(str))
+console.log(str.match(/(\d)(?=\d{3})+/g))
+
+</script>
+
+</html>

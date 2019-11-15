@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div {
+            padding: 100px;
+        }
+
+        #box {
+            background: red;
+            _position: relative;
+        }
+
+        #box1 {
+            background: green;
+            position: relative;
+            border: 50px solid #000;
+        }
+
+        #box2 {
+            background: skyblue;
+            position: absolute;
+            top: 150px;
+            border: 50px solid #000;
+        }
+    </style>
+</head>
+
+<body>
+    <div><i>
+            6_课件offsetLeft
+        </i>
+
+    </div>
+    <div id="box">
+        <div id="box1">
+            <div id='box2'></div>
+        </div>
+    </div>
+
+</body>
+
+<script>
+
+    /* offsetLeft offsetTop在实际使用中由于根据父级定位在复杂的布局页面时慎重使用
+     */
+    let nowEle = box2;
+    let l = 0;
+    while (nowEle) {
+        l += (nowEle.offsetLeft + nowEle.clientLeft);
+        nowEle = nowEle.offsetParent;
+    }
+</script>
+
+</html>
