@@ -147,7 +147,7 @@ const btns = document.querySelectorAll('.top_func li');
 
             let re = new RegExp(value);
             if(re.test(pText)){
-                // console.log()
+               
                 p.innerHTML = pText.split(value).join('<span>'+ value +'</span>')
                 text1.value = '';
             }else{
