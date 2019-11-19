@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+
+
+<script>
+
+let str ='abacababcbacabc';
+function replace(str,re,cb){
+
+    let str2 ='';
+    let ary =re.exec(str)
+let red ='';
+let reAry =[];
+let noRep =[];
+let num =0;
+while (ary){
+console.log(ary)
+let {index}= ary ;
+reAry .push(cb(...ary,index,str)); 
+noRep.push(str.substring(num,re.lastIndex-ary[0].length));
+num =re.lastIndex;
+ary=re.exec(str);
+
+}
+noRep.forEach((old,i)=>{str2+=(old+reAry[i])})
+console.log(str2);
+return str2
+}
+
+let i =0;
+let s= replace(str,/abc/g,function($0,$1,$2,$3,$4,$5,){return 'ade'+i++});
+
+console.log (s);
+
+</script>
+</html>

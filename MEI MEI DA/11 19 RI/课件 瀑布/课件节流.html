@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body style="height: 3000000000000;">
+    
+</body>
+
+<script>
+
+function throttling(ab,time){
+let prevtime =0;
+return function (...ary){
+    let nowTime =+new Date;
+    if(nowTime -prevtime >time){
+        cb.call(this,...ary);
+    }
+prevtime =nowTime;
+}
+
+};
+document.onclick =throttling(fn,200);
+function fn(ev){
+    console.log('触发了',ev,this);
+    function debounce(cb,time){
+let timer;
+return function(...ary){
+    if(timer){clearTimeout(timer);}
+    timer =setTimeout (()=>{cb.call(this,...ary)},timer)
+}
+    }
+}
+
+
+</script>
+</html>
